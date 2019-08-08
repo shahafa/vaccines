@@ -4,7 +4,7 @@ import json
 from bs4 import BeautifulSoup
 
 def parseGroup(group):
-  groupString = group.replace(' – ', ' ').strip()
+  groupString = group.replace(' - ', ' ').strip()
   groupStringWithoutParentheses = re.sub(r' \(.*\)', '', groupString)
   return re.sub(r' \(.*$', '', groupStringWithoutParentheses).split(" ,")
 
