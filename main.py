@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
-
 import requests
 import re
-import json
 from bs4 import BeautifulSoup
 
+
 def parseGroup(group):
-  groupString = group.replace(' - ', ' ').strip()
-  groupStringWithoutParentheses = re.sub(r' \(.*\)', '', groupString)
-  return re.sub(r' \(.*$', '', groupStringWithoutParentheses).split(" ,")
+  groupString = group.replace(' – ', ' ').strip()
+  return groupString.split(",")
+
 
 page = requests.get("https://www.isramedia.net/content/vaccinations-to-travel-abroad")
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -45,11 +43,13 @@ for country in countryElements:
     "group3": group3,
   })
 
-
 selectedCountry = input("הקש מדינה: ")
 selectedGroup = input("הקש מספר קבוצה: ")
 
 for vaccines in vaccinesByCountry:
   if vaccines["country"] == selectedCountry:
     selectedGroupString = "group{0}".format(selectedGroup)
-    print(vaccines[selectedGroupString])
+    index = 1
+    for word in vaccines[selectedGroupString]:
+      print(str(index)+": " + word)
+      index +=1
