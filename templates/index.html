@@ -1,0 +1,84 @@
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8">
+    <script type=text/javascript>
+
+    </script>
+</head>
+<body style="margin-right: 30px; margin-top: 30px">
+<form method="post" id="form">
+    <h3  style="margin-top: 15px; color: cadetblue;">
+        בחר סוג מטייל
+        <select id="group" style="width: 150px; height: 30px; font-size: 15px; border: 1px solid; margin-right: 15px;">
+            <option>
+                1
+            </option>
+            <option>
+                2
+            </option>
+            <option>
+                3
+            </option>
+        </select>
+    </h3>
+    <div style="font-size: 13px;">
+        <p>
+            קבוצה 1:
+            נוסעים לתקופה קצרה, כאשר יעד הנסיעה הוא ישוב עירוני והשהייה היא בבתי  מלון מדרגה גבוהה
+        </p>
+        <p>
+            קבוצה 2:
+            אנשי עסקים הנוסעים נסיעות חוזרות או מטיילים בטיול מאורגן לתקופה של עד 4 שבועות, הכולל "גיחות" לטיולים יומיִים
+        </p>
+        <p>
+            קבוצה 3:
+            המטיילים בטיול תרמילים או טיול מאורגן מעל 4 שבועות בעל אופי של טיול תרמילים
+        </p>
+    </div>
+    <h3  style="margin-top: 15px; color: cadetblue;">
+       בחר מדינה
+        <select id="countries_select" style="width: 150px; height: 30px; font-size: 15px; border: 1px solid; margin-right: 15px;">
+        </select>
+    </h3>
+    <div>
+        <input type="submit" value="בדוק חיסונים" style="margin-top: 20px; font-size: 15px; border-radius: 5px; width: 150px; background-color: cadetblue; color: white; padding: 10px;">
+    </div>
+</form>
+<ul id = result>
+</ul>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $('#form').on('submit', function(e){
+        var group = document.getElementById("group");
+        var groupSelected = group.options[group.selectedIndex].value;
+
+        var countries = document.getElementById("countries_select");
+        var countrySelected = countries.options[countries.selectedIndex].value;
+
+        e.preventDefault();
+
+        $.ajax({
+            url: '/result/',
+            data: {'group': groupSelected, 'country': countrySelected},
+            method: 'POST',
+            success: function(data) {
+                $("#result").empty();
+
+                $.each(data['vaccines'], function(i, vaccine) {
+                    $("#result").append("<li>" + vaccine + "</li>");
+                });
+            }
+        });
+    });
+</script>
+</body>
+<script>
+    var select = document.getElementById("countries_select");
+    countries = {{ countries | tojson }}
+
+    for(index in countries) {
+        select.options[select.options.length] = new Option(countries[index], countries[index]);
+    }
+
+</script>
+</html>

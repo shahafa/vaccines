@@ -1,30 +1,30 @@
 ﻿"מק""ט לקנייה למלאי","מק""ט מכירה לצרכן",תיאור החיסון,חיסון כנגד מחלה,מחיר מחירון,מחיר למחוסן,הערות,מיפוי
-5600262,7100785,BCG Vaccine 10 dose,שחפת,67 ₪,13 ₪,רב מנתי,
-5600255,7100786,DIPH. TET. PREFILID 1DOSE ADULT,טטנוס - דיפתריה,27 ₪,27 ₪,, כלורוקווין/פלקווניל מפלוקווין או דוקסיציקלין או מלרון
-5600256,7100787,Diph. Tet. Tox For Child DT 10 DOSE for Child,טטנוס - דיפתריה לילדים,61 ₪,12 ₪ ,רב מנתי,
-5600267,7100788,Haemophilus Type B Conjug. Vac. ACT-HIB,הומפילוס אינפלואנזה b,65 ₪,65 ₪ ,,הגנה בפני עקיצת יתושים
-5001892,7100262,Hepatitis A Vacc. Incat. Vaqta Adult,דלקת כבד A,67 ₪,67 ₪,,דלקת כבד נגיפית A
-5001892,7100789,Hepatitis B Vacc. Inact. 1440 Havrix Adult,דלקת כבד A,78 ₪,78 ₪,,דלקת כבד נגיפית A
-5000784,7100790,Hepatitis B Vacc. Adult 1ml ENGERIX - B,דלקת כבד B,40 ₪,40 ₪,,דלקת כבד נגיפית B
-5002554,7102141,Hepatitis B Vacc. Adult 10 mcg SCI-B-VAC,דלקת כבד B,38 ₪,38 ₪,,דלקת כבד נגיפית B
-5600263,7100791,Inactiv. Poliovirus 0.5ml Vacc. Imovax Pol. Syringes,שיתוק ילדים (פוליו),40 ₪,40 ₪,,
-5002794,7102332,Japanese Encephalitis - IXIARO,דלקת מוח יפנית,378 ₪,378 ₪,, דלקת מוח יפנית
-5003120,71004273,Menungococcal Polysac Vacc. Menactra,מחלה מנינגוקוקית,170 ₪,170 ₪,,
-5002858,7100794,Pneumococcal Vacc. 0.5ml PNEUMOVAX 23,זיהומים פנוימוקוקיים,49 ₪,49 ₪,,
-5000223,7100796,Hepatiryx - Salmonella Typhi+Hepatitis A Vaccine,דלקת כבד A וטיפוס הבטן (טייפואיד),119 ₪,119 ₪,,
-5100313,7100797,Tick Borne Encephalitis Vaccine Pediatric,"דלקת מוח הנגרמת ע""י עקיצת קרציה לילדים",552 ₪,552 ₪,,דלקת מוח מקרציות 
-5100321,7100798,Tick Borne Encephalitis Vaccine  ,"דלקת מוח הנגרמת ע""י עקיצת קרציה ",410 ₪,410 ₪,,
-5600261,7100799,Tuberculine 5 I.U. 10 Dose,תבחין טוברקולין (מנטו),131 ₪,26 ₪,רב מנתי,תבחין טוברקולין
-5100028,7100800,Typhoid Vaccine TYPHIM VI TYPHRIX,טיפוס הבטן (טייפואיד),65 ₪,65 ₪,,טייפואיד
-5000221,7101062,Yellow Fever Vaccine 1 Dose,קדחת צהובה,158 ₪,158 ₪,,
-5600260,7100891,Measles Mumps Rubella Vaccine PRIORIX,חצבת חזרת אדמת,42 ₪,42 ₪,,
-5600259,7100892,Rabies vaccine,כלבת,96 ₪,96 ₪,, כלבת 
-5002455,7101001,Varicella vav,אבעבועות רוח,134 ₪,134 ₪,,
-5002792,7101066,dTap 1 dose,טטנוס דיפתריה שעלת,66 ₪,66 ₪,בוטריקס חד מנתי,
-5100092,7101067,dTap + IPV 1 dose,טטנוס דיפתריה שעלת פוליו,85 ₪,85 ₪,בוטריקס פוליו חד מנתי,פוליו
-5600266,7101064,Hepatitis A pediatric HAVRIX,דלקת כבד A לילדים,41 ₪,41 ₪,,
-5600265,7101065,Hepatitis B pediatric ENGERIX,דלקת כבד B לילדים,18 ₪,18 ₪,,
-5100351,7101068,MMRV priorix tetra,חצבת חזרת אדמת אבעבועות רוח,170 ₪,170 ₪,,
-5100541,7102574,Rotateq,זיהום הנגרם על ידי נגיף רוטה,21 ₪,21 ₪,,
-5100711,7102575,Nimenrix,מחלה מניגוקוקית,182 ₪,182 ₪,,
-5003264,7102573,Prevenar13,זיהומים פנוימוקוקיים,196 ₪,196 ₪,,
+5600262,7100785,BCG Vaccine 10 dose,שחפת,67 ,13 ,רב מנתי,
+5600255,7100786,DIPH. TET. PREFILID 1DOSE ADULT,טטנוס - דיפתריה,27 ,27 ,, כלורוקווין/פלקווניל מפלוקווין או דוקסיציקלין או מלרון
+5600256,7100787,Diph. Tet. Tox For Child DT 10 DOSE for Child,טטנוס - דיפתריה לילדים,61 ,12  ,רב מנתי,
+5600267,7100788,Haemophilus Type B Conjug. Vac. ACT-HIB,הומפילוס אינפלואנזה b,65 ,65  ,,הגנה בפני עקיצת יתושים
+5001892,7100262,Hepatitis A Vacc. Incat. Vaqta Adult,דלקת כבד A,67 ,67 ,,דלקת כבד נגיפית A
+5001892,7100789,Hepatitis B Vacc. Inact. 1440 Havrix Adult,דלקת כבד A,78 ,78 ,,דלקת כבד נגיפית A
+5000784,7100790,Hepatitis B Vacc. Adult 1ml ENGERIX - B,דלקת כבד B,40 ,40 ,,דלקת כבד נגיפית B
+5002554,7102141,Hepatitis B Vacc. Adult 10 mcg SCI-B-VAC,דלקת כבד B,38 ,38 ,,דלקת כבד נגיפית B
+5600263,7100791,Inactiv. Poliovirus 0.5ml Vacc. Imovax Pol. Syringes,שיתוק ילדים (פוליו),40 ,40 ,,
+5002794,7102332,Japanese Encephalitis - IXIARO,דלקת מוח יפנית,378 ,378 ,, דלקת מוח יפנית
+5003120,71004273,Menungococcal Polysac Vacc. Menactra,מחלה מנינגוקוקית,170 ,170 ,,
+5002858,7100794,Pneumococcal Vacc. 0.5ml PNEUMOVAX 23,זיהומים פנוימוקוקיים,49 ,49 ,,
+5000223,7100796,Hepatiryx - Salmonella Typhi+Hepatitis A Vaccine,דלקת כבד A וטיפוס הבטן (טייפואיד),119 ,119 ,,
+5100313,7100797,Tick Borne Encephalitis Vaccine Pediatric,"דלקת מוח הנגרמת ע""י עקיצת קרציה לילדים",552 ,552 ,,דלקת מוח מקרציות 
+5100321,7100798,Tick Borne Encephalitis Vaccine  ,"דלקת מוח הנגרמת ע""י עקיצת קרציה ",410 ,410 ,,
+5600261,7100799,Tuberculine 5 I.U. 10 Dose,תבחין טוברקולין (מנטו),131 ,26 ,רב מנתי,תבחין טוברקולין
+5100028,7100800,Typhoid Vaccine TYPHIM VI TYPHRIX,טיפוס הבטן (טייפואיד),65 ,65 ,,טייפואיד
+5000221,7101062,Yellow Fever Vaccine 1 Dose,קדחת צהובה,158 ,158 ,,
+5600260,7100891,Measles Mumps Rubella Vaccine PRIORIX,חצבת חזרת אדמת,42 ,42 ,,
+5600259,7100892,Rabies vaccine,כלבת,96 ,96 ,, כלבת 
+5002455,7101001,Varicella vav,אבעבועות רוח,134 ,134 ,,
+5002792,7101066,dTap 1 dose,טטנוס דיפתריה שעלת,66 ,66 ,בוטריקס חד מנתי,
+5100092,7101067,dTap + IPV 1 dose,טטנוס דיפתריה שעלת פוליו,85 ,85 ,בוטריקס פוליו חד מנתי,פוליו
+5600266,7101064,Hepatitis A pediatric HAVRIX,דלקת כבד A לילדים,41 ,41 ,,
+5600265,7101065,Hepatitis B pediatric ENGERIX,דלקת כבד B לילדים,18 ,18 ,,
+5100351,7101068,MMRV priorix tetra,חצבת חזרת אדמת אבעבועות רוח,170 ,170 ,,
+5100541,7102574,Rotateq,זיהום הנגרם על ידי נגיף רוטה,21 ,21 ,,
+5100711,7102575,Nimenrix,מחלה מניגוקוקית,182 ,182 ,,
+5003264,7102573,Prevenar13,זיהומים פנוימוקוקיים,196 ,196 ,,

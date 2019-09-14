@@ -1,5 +1,9 @@
+# coding=utf-8
+
 import db
 import htmlParser
+from flask import Flask, render_template, request, jsonify
+app = Flask(__name__)
 
 db.openConnection()
 db.loadVaccinesPriceListCsvToDb()
@@ -8,15 +12,26 @@ vaccinesByCountry = htmlParser.parseVaccinationsToTravelAbroadHtmlPage()
 
 db.createVaccinesByCountryTable(vaccinesByCountry)
 
-selectedCountry = input("הקש מדינה: ")
-selectedGroup = input("הקש מספר קבוצה: ")
+countries_options = db.getAllCountries()
 
-for vaccines in vaccinesByCountry:
-  if vaccines["country"] == selectedCountry:
-    selectedGroupString = "group{0}".format(selectedGroup)
-    index = 1
-    for word in vaccines[selectedGroupString]:
-      print(str(index)+": " + word)
-      index +=1
+@app.route('/')
+def main_page():
+    return render_template('index.html', countries=countries_options)
+
+@app.route('/result/', methods=['POST'])
+def result():
+    country = request.form.get('country', 0)
+    group = request.form.get('group', 0)
+
+    records = db.getVaccinesByCountryAndGroup(country, group)
+
+    for record in records[0][0].replace('{', '').replace('"', '').replace('}', '').split(','):
+        print db.getVaccinePrice(record)
+
+    data = {'vaccines': records[0][0].split(',')}
+    data = jsonify(data)
+    return data
+
+app.run(host='0.0.0.0')
 
 db.closeConnection()
