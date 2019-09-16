@@ -9,7 +9,6 @@ db.openConnection()
 db.loadVaccinesPriceListCsvToDb()
 
 vaccinesByCountry = htmlParser.parseVaccinationsToTravelAbroadHtmlPage()
-
 db.createVaccinesByCountryTable(vaccinesByCountry)
 
 countries_options = db.getAllCountries()
@@ -25,13 +24,13 @@ def result():
 
     records = db.getVaccinesByCountryAndGroup(country, group)
 
+    res = []
     for record in records[0][0].replace('{', '').replace('"', '').replace('}', '').split(','):
-        print db.getVaccinePrice(record)
+        res.append({
+            "vaccine": record,
+            "price": sum(map(lambda x: int(x[0]) if x[0] is not None else 0, db.getVaccinePrice(record)))
+        })
 
-    data = {'vaccines': records[0][0].split(',')}
-    data = jsonify(data)
-    return data
+    return (jsonify(res))
 
 app.run(host='0.0.0.0')
-
-db.closeConnection()

@@ -1,9 +1,12 @@
 from bs4 import BeautifulSoup
+import re
 import requests
 
 def parseGroup(group):
-  groupString = group.replace(' – ', ' ').strip()
-  return groupString.split(",")
+  groupStringWithoutComment = re.sub(r" ?\([^)]+\)", "", group)
+  groupString = groupStringWithoutComment.replace(' – ', ' ').strip()
+  groupList = [element.strip() for element in groupString.split(",")]
+  return groupList
 
 def parseVaccinationsToTravelAbroadHtmlPage():
   page = requests.get("https://www.isramedia.net/content/vaccinations-to-travel-abroad")

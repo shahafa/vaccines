@@ -42,16 +42,15 @@ def getVaccinesByCountryAndGroup(country, group):
     cur = conn.cursor()
     groupField = "group{0}".format(group)
 
-    query = "SELECT {0} FROM vaccines_by_country where country = '{1}'".format(groupField, country.encode('utf-8'))
+    query = "SELECT {0} FROM vaccines_by_country where country = '{1}'".format(groupField, country)
     cur.execute(query)
 
     return cur.fetchall()
 
 def getVaccinePrice(vaccine):
     cur = conn.cursor()
-    print vaccine
 
-    query = "SELECT customerPrice FROM vaccines_price_list where map = '{0}'".format(vaccine[::-1])
+    query = "SELECT customerPrice FROM vaccines_price_list where map = '{0}'".format(vaccine)
     cur.execute(query)
 
     return cur.fetchall()
