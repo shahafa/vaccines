@@ -3,6 +3,8 @@
 import db
 import htmlParser
 from flask import Flask, render_template, request, jsonify
+import re
+
 app = Flask(__name__)
 
 db.openConnection()
@@ -25,9 +27,9 @@ def result():
     records = db.getVaccinesByCountryAndGroup(country, group)
 
     res = []
-    for record in records[0][0].replace('{', '').replace('"', '').replace('}', '').split(','):
+    for record in re.sub('({|}|"|-)', '', records[0][0]).split(','):
         res.append({
-            "vaccine": record,
+            "name": record,
             "price": sum(map(lambda x: int(x[0]) if x[0] is not None else 0, db.getVaccinePrice(record)))
         })
 

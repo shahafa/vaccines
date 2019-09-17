@@ -2,23 +2,20 @@
 <head>
     <meta charset="utf-8">
     <script type=text/javascript>
-
     </script>
 </head>
+<style>
+    table {font-family: arial, sans-serif;border-collapse: collapse;}
+    td, th {border: 1px solid #dddddd;text-align: right;padding: 8px; width: 300px;}
+</style>
 <body style="margin-right: 30px; margin-top: 30px">
 <form method="post" id="form">
     <h3  style="margin-top: 15px; color: cadetblue;">
         בחר סוג מטייל
         <select id="group" style="width: 150px; height: 30px; font-size: 15px; border: 1px solid; margin-right: 15px;">
-            <option>
-                1
-            </option>
-            <option>
-                2
-            </option>
-            <option>
-                3
-            </option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
         </select>
     </h3>
     <div style="font-size: 13px;">
@@ -44,8 +41,9 @@
         <input type="submit" value="בדוק חיסונים" style="margin-top: 20px; font-size: 15px; border-radius: 5px; width: 150px; background-color: cadetblue; color: white; padding: 10px;">
     </div>
 </form>
-<ul id = result>
-</ul>
+
+<table id="result"></table>
+
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
     $('#form').on('submit', function(e){
@@ -63,9 +61,12 @@
             method: 'POST',
             success: function(data) {
                 $("#result").empty();
+                $("#result").append('<thead><tr><td>שם החיסון</td><td>מחיר בש״ח</td></tr></thead>')
 
-                $.each(data['vaccines'], function(i, vaccine) {
-                    $("#result").append("<li>" + vaccine + "</li>");
+                $.each(data, function(i, vaccine) {
+                    if (vaccine["price"]) {
+                        $("#result").append('<tr><td>' + vaccine["name"] + '</td><td>' + vaccine["price"] + '</td></tr>');
+                    }
                 });
             }
         });
@@ -79,6 +80,5 @@
     for(index in countries) {
         select.options[select.options.length] = new Option(countries[index], countries[index]);
     }
-
 </script>
 </html>
